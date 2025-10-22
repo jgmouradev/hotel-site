@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paradise Resort | Bem-vindo</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;700&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header class="header">
+      <nav class="nav container">
+        <a href="#" class="nav-logo">Paradise Resort</a>
+        <ul class="nav-list">
+          <li><a href="#quartos" class="nav-link">Quartos</a></li>
+          <li><a href="#galeria" class="nav-link">Galeria</a></li>
+          <li><a href="#reserva" class="nav-link">Reserva</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero" id="home">
+        <div class="hero-content">
+          <h1>Tranquilidade e Sofisticação.</h1>
+          <p>
+            Uma experiência inesquecível, onde o design e o conforto se
+            encontram.
+          </p>
+          <a href="#reserva" class="btn">Reservar Agora</a>
+        </div>
+      </section>
+
+      <section id="quartos" class="container">
+        <h2 class="section-title">Nossas Acomodações</h2>
+        <div class="quartos-grid">
+          <div class="quarto-card">
+            <img
+              src="assets/images/room/pexels-pixabay-279746.jpg"
+              alt="Quarto Deluxe"
+              class="quarto-card-img"
+            />
+            <div class="quarto-card-content">
+              <h3>Quarto Deluxe</h3>
+              <p>
+                Espaço e elegância com vista para a cidade. Ideal para quem
+                busca conforto e praticidade.
+              </p>
+              <a href="#reserva" class="btn">Reservar</a>
+            </div>
+          </div>
+          <div class="quarto-card">
+            <img
+              src="assets/images/room/pexels-jonathanborba-30708771.jpg"
+              alt="Quarto Premium"
+              class="quarto-card-img"
+            />
+            <div class="quarto-card-content">
+              <h3>Quarto Premium</h3>
+              <p>
+                Design contemporâneo e amenities exclusivas para uma estadia
+                memorável.
+              </p>
+              <a href="#reserva" class="btn">Reservar</a>
+            </div>
+          </div>
+          <div class="quarto-card">
+            <img
+              src="assets/images/room/pexels-pixabay-271643.jpg"
+              alt="Suíte Master"
+              class="quarto-card-img"
+            />
+            <div class="quarto-card-content">
+              <h3>Suíte Master</h3>
+              <p>
+                O auge do luxo e privacidade, com sala de estar e varanda
+                privativa.
+              </p>
+              <a href="#reserva" class="btn">Reservar</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="galeria" class="container">
+        <h2 class="section-title">Explore o Hotel</h2>
+        <div class="galeria-grid">
+          <div class="galeria-item">
+            <img
+              src="assets/images/gallery/pexels-bestplaylist-30682397.jpg"
+              alt="Foto da galeria 1"
+              class="galeria-img"
+            />
+          </div>
+          <div class="galeria-item">
+            <img
+              src="assets/images/gallery/pexels-cottonbro-6466298.jpg"
+              alt="Foto da galeria 2"
+              class="galeria-img"
+            />
+          </div>
+          <div class="galeria-item">
+            <img
+              src="assets/images/gallery/pexels-kathrinepnw-25016140.jpg"
+              alt="Foto da galeria 3"
+              class="galeria-img"
+            />
+          </div>
+          <div class="galeria-item">
+            <img
+              src="assets/images/gallery/pexels-monkeytactics-751266.jpg"
+              alt="Foto da galeria 4"
+              class="galeria-img"
+            />
+          </div>
+          <div class="galeria-item">
+            <img
+              src="assets/images/gallery/pexels-nguyen-ngoc-tien-1321490019-32611687.jpg"
+              alt="Foto da galeria 5"
+              class="galeria-img"
+            />
+          </div>
+          <div class="galeria-item">
+            <img
+              src="assets/images/gallery/pexels-enginakyurt-1579253.jpg"
+              alt="Foto da galeria 6"
+              class="galeria-img"
+            />
+          </div>
+        </div>
+      </section>
+
+      <section id="reserva" class="container">
+        <h2 class="section-title">Faça sua Reserva</h2>
+        <form class="reserva-form">
+          <div class="form-group">
+            <label for="checkin">Check-in</label>
+            <input type="date" id="checkin" name="checkin" />
+          </div>
+          <div class="form-group">
+            <label for="checkout">Check-out</label>
+            <input type="date" id="checkout" name="checkout" />
+          </div>
+          <div class="form-group">
+            <label for="hospedes">Número de Hóspedes</label>
+            <input
+              type="number"
+              id="hospedes"
+              name="hospedes"
+              min="1"
+              value="2"
+            />
+          </div>
+          <button type="submit" class="btn">Verificar Disponibilidade</button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <div class="container">
+        <p>&copy; 2025 Paradise Resort. Todos os direitos reservados.</p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="assets/js/main.js"></script>
+  </body>
+</html>
