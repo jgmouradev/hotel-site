@@ -282,3 +282,166 @@
           grid-template-rows: repeat(3, 200px);
         }
       }
+
+      /* --- Estilos da Área de Resultados --- */
+#results-area {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+    animation: fadeIn 0.8s ease-in-out;
+}
+
+.quarto-card {
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+
+.quarto-card:hover {
+    transform: translateY(-10px);
+}
+
+.quarto-card-content {
+    padding: 1.5rem;
+}
+
+.quarto-card-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.8rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.quarto-card-content p {
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+/* Preço em destaque */
+.price-highlight {
+    display: block;
+    font-size: 1.2rem;
+    color: #e67e22; /* Cor de destaque que você já usa */
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+/* Animação para os resultados aparecerem suavemente */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+
+/* --- Estilo do Spinner --- */
+.spinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-left-color: #e67e22; /* A cor de destaque do seu resort */
+  border-radius: 50%;
+  display: inline-block;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+/* Esconder os resultados temporariamente */
+.hidden {
+  display: none !important;
+}
+
+/* --- ESTILIZAÇÃO DA ÁREA DE RESULTADOS --- */
+
+#results-area {
+    margin-top: 2rem;
+    padding: 1rem;
+    border-radius: 8px;
+    min-height: 50px;
+    transition: all 0.3s ease;
+}
+
+/* Container dos cards de resultado */
+.resultado-card {
+    background: #fff;
+    border-left: 5px solid #d4af37; /* Um tom dourado para sofisticação */
+    padding: 1.5rem;
+    margin-bottom: 1rem;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    animation: fadeIn 0.5s ease forwards;
+    text-align:center;
+}
+
+.resultado-card h4 {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 1.5rem;
+    color: #333;
+    margin-bottom: 0.5rem;
+    ;
+}
+
+.resultado-card p {
+    font-family: 'Poppins', sans-serif;
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.status-disponivel {
+    color: #27ae60;
+    font-weight: 600;
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Mensagem de erro/não encontrado */
+.aviso-erro {
+    background-color: #fff5f5;
+    color: #c0392b;
+    padding: 1rem;
+    border-radius: 4px;
+    border: 1px solid #ebccd1;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Animação para os resultados aparecerem suavemente */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.preco-container {
+    margin: 15px 0;
+    padding-top: 10px;
+    border-top: 1px dashed #ddd;
+}
+
+.preco-diaria {
+    font-size: 0.85rem;
+    color: #888;
+    display: block;
+}
+
+.preco-total {
+    color: #d4af37; /* Dourado */
+    font-size: 1.8rem;
+    margin-top: 5px;
+    font-family: 'Cormorant Garamond', serif;
+}

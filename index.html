@@ -139,27 +139,33 @@
 
       <section id="reserva" class="container">
         <h2 class="section-title">Faça sua Reserva</h2>
-        <form class="reserva-form">
+        <form class="reserva-form" id="hotel-form">
           <div class="form-group">
             <label for="checkin">Check-in</label>
-            <input type="date" id="checkin" name="checkin" />
+            <input type="date" id="checkin" required />
           </div>
+
           <div class="form-group">
             <label for="checkout">Check-out</label>
-            <input type="date" id="checkout" name="checkout" />
+            <input type="date" id="checkout" required />
           </div>
+
           <div class="form-group">
             <label for="hospedes">Número de Hóspedes</label>
             <input
               type="number"
               id="hospedes"
-              name="hospedes"
               min="1"
+              max="10"
               value="2"
+              required
             />
           </div>
+
           <button type="submit" class="btn">Verificar Disponibilidade</button>
         </form>
+
+        <div id="results-area"></div>
       </section>
     </main>
 
@@ -171,5 +177,6 @@
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="assets/js/main.js"></script>
+    <script src="assets/js/schedule.js"></script>
   </body>
 </html>
