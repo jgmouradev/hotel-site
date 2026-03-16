@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400..700;1,400..700&display=swap');
 /* --- RESET & VARIÁVEIS GLOBAIS --- */
       :root {
         --cor-principal: #1a1a1a;
@@ -5,7 +6,7 @@
         --cor-destaque: #bfa181;
         --cor-texto: #555;
 
-        --font-titulos: "Cormorant Garamond", serif;
+        --font-titulos: "Libre Baskerville", serif;
         --font-corpo: "Poppins", sans-serif;
       }
 
@@ -59,7 +60,7 @@
         left: 0;
         z-index: 100;
         background-color: rgba(26, 26, 26, 0.8);
-        backdrop-filter: blur(10px);
+        backdrop-filter: blur(2px);
         padding: 1rem 0;
         transition: padding 0.3s ease;
       }
@@ -108,25 +109,40 @@
         width: 100%;
       }
 
-      /* --- HERO SECTION --- */
       .hero {
-        height: 100vh;
-        background-image: url('../images/hotel.jpg');
-        background-size: cover;
-        background-position: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        color: var(--cor-secundaria);
-      }
+    position: relative;
+    height: 100vh; /* Ocupa a altura total da tela */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden; /* Esconde o que sobrar do vídeo */
+    color: white;
+}
 
-      .hero-content {
-        width: 100%;
-        height: auto;
-         
+.hero-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Faz o vídeo cobrir tudo sem esticar */
+    z-index: -2; /* Fica atrás de tudo */
+}
 
-      }
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4); /* Escurece o vídeo em 40% */
+    z-index: -1; /* Fica entre o vídeo e o texto */
+}
+
+.hero-content {
+    z-index: 1; /* Garante que o texto fique na frente */
+    text-align: center;
+}
 
       .hero h1 {
         font-size: 5rem;
@@ -142,13 +158,16 @@
       .btn {
         display: inline-block;
         padding: 0.8rem 2.5rem;
+        margin-top: 1rem;
         margin-bottom: 2rem;
         background-color: var(--cor-destaque);
         color: var(--cor-secundaria);
         text-decoration: none;
         border: 1px solid var(--cor-destaque);
         font-weight: 400;
+        font-family: var(--font-titulos);
         transition: all 0.3s ease;
+        cursor: pointer;
       }
 
       .btn:hover {
@@ -444,4 +463,37 @@
     font-size: 1.8rem;
     margin-top: 5px;
     font-family: 'Cormorant Garamond', serif;
+}
+
+/* O Spinner (Círculo Giratório) */
+.spinner {
+    display: none; /* Escondido por padrão */
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 50%;
+    border-top-color: #fff;
+    animation: spin 1s ease-in-out infinite;
+    margin-left: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+/* Estado do botão durante o processamento */
+.btn-processando {
+    opacity: 0.7;
+    cursor: not-allowed;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-processando .spinner {
+    display: inline-block;
+}
+
+.reservas-recentes h3 {
+   margin-bottom: 2rem;
 }

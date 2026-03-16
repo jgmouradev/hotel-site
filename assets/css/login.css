@@ -1,0 +1,271 @@
+/* Estilos Específicos para Login */
+.login-body {
+    background: #f8f9fa;
+               
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-box {
+    background: white;
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    width: 100%;
+    max-width: 400px;
+    text-align: center;
+}
+
+.login-header h1 {
+    font-family: 'Cormorant Garamond', serif;
+    color: #d4af37;
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+.login-header p {
+    font-family: 'Poppins', sans-serif;
+    color: #333;
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+}
+
+.login-options {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    font-size: 0.85rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+.btn-block {
+    width: 100%;
+    padding: 12px;
+    font-size: 1rem;
+}
+
+.login-footer {
+    margin-top: 25px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-size: 0.9rem;
+}
+
+.login-footer a {
+    display: inline-block;
+   
+   width: fit-content;
+   padding: 8px 12px;
+   border-radius: 5px;
+   font-family: 'Poppins', sans-serif;
+   font-weight: 600;
+}
+.login-footer a:hover {
+    background-color: #fdfaf3;
+    color: #b8962d;
+}
+
+
+.back-link {
+    display: block;
+    margin-top: 15px;
+    color: #888;
+    text-decoration: none;
+}
+
+/* --- ESTILOS GLOBAIS DE FORMULÁRIO --- */
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left; /* Garante que o label fique à esquerda */
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    color: #333;
+}
+
+/* Estilo para todos os campos de texto do site */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    outline: none;
+    transition: border-color 0.3s ease;
+}
+
+input:focus {
+    border-color: #d4af37; /* Cor dourada ao clicar no campo */
+}
+
+/* --- ESTILO GLOBAL DO BOTÃO --- */
+
+.btn {
+    background-color: #d4af37;
+    color: white;
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 600;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+    text-decoration: none; /* Caso o botão seja um link <a> */
+    display: inline-block;
+}
+
+.btn:hover {
+    background-color: #b8962d;
+    transform: translateY(-2px);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+}
+
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    padding-right: 45px; /* Espaço para o ícone não cobrir a senha */
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2rem;
+    color: #888;
+    transition: color 0.3s;
+}
+
+.toggle-icon:hover {
+    color: #d4af37; /* Dourado ao passar o mouse */
+}
+
+.toggle-icon {
+    position: absolute;
+    right: 15px;
+    cursor: pointer;
+    color: #777;
+    font-size: 1rem; /* Tamanho mais discreto e profissional */
+    transition: color 0.3s ease;
+}
+
+.toggle-icon:hover {
+    color: #d4af37; /* Dourado da sua marca */
+}
+
+.toggle-icon {
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.toggle-icon:active {
+    transform: scale(0.9); /* Efeito de clique no ícone */
+}
+
+/* Espaçamento entre labels e inputs */
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: #444;
+}
+
+/* Divisor visual entre Entrar e Cadastrar */
+.divider {
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #bbb;
+    font-size: 0.8rem;
+}
+
+.divider::before, .divider::after {
+    content: '';
+    flex: 1;
+    border-bottom: 1px solid #eee;
+}
+
+.divider:not(:empty)::before { margin-right: .5em; }
+.divider:not(:empty)::after { margin-left: .5em; }
+
+/* Botão de contorno para o cadastro */
+.btn-outline {
+    background-color: transparent;
+    border: 2px solid #d4af37;
+    color: #d4af37;
+    margin-top: 10px;
+}
+
+.btn-outline:hover {
+    background-color: #fdfaf3;
+    color: #b8962d;
+}
+
+.btn {
+    /* ... seus estilos anteriores ... */
+    display: inline-flex; /* Permite alinhar texto e ícones centralizados */
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box; /* Garante que o padding não aumente a largura além dos 100% */
+    width: auto; /* Valor padrão */
+}
+
+/* Esta classe força o botão (ou link) a ocupar toda a largura disponível */
+.btn-block {
+    display: flex; 
+    width: 100%;
+    text-align: center;
+}
+
+/* Ajuste específico para links que agem como botões */
+a.btn {
+    text-decoration: none;
+}
+
+/* Estilo forçado para o alerta de reserva */
+.alerta-reserva {
+    background-color: #fdfaf3 !important; /* Creme Suave */
+    border-left: 5px solid #d4af37 !important; /* Faixa Dourada */
+    color: #8a6d3b !important; /* Marrom Dourado para o texto */
+    padding: 15px 20px;
+    margin-bottom: 25px;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.1);
+    animation: fadeInSlide 0.5s ease-out;
+}
+
+.alerta-reserva i {
+    color: #d4af37; /* Ícone dourado */
+    font-size: 1.2rem;
+}
+
+@keyframes fadeInSlide {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}

@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Paradise Resort | Login</title>
+    <link rel="stylesheet" href="assets/css/login.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@600&family=Poppins:wght@300;400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+  </head>
+  <body class="login-body">
+    <div class="login-container">
+      <div class="login-box">
+        <header class="login-header">
+          <h1>Paradise Resort</h1>
+          <p>Acesse ou crie sua conta para realizar reservas</p>
+        </header>
+
+        <form id="login-form">
+          <div class="form-group">
+            <label for="email">E-mail</label>
+            <input
+              type="email"
+              id="email"
+              placeholder="seu@email.com"
+              required
+            />
+          </div>
+
+          <div class="form-group">
+            <label for="password">Senha</label>
+            <div class="password-wrapper">
+              <input
+                type="password"
+                id="password"
+                placeholder="••••••••"
+                required
+              />
+              <i
+                class="fa-regular fa-eye-slash toggle-icon"
+                id="togglePassword"
+              ></i>
+            </div>
+          </div>
+
+          <div class="login-options">
+            <label><input type="checkbox" /> Lembrar-me</label>
+            <a href="#">Esqueceu a senha?</a>
+          </div>
+
+          <button type="submit" class="btn btn-block">Entrar</button>
+
+          <div class="divider">ou</div>
+
+          <a href="cadastro.html" class="btn btn-block btn-outline"
+            >Criar Nova Conta</a
+          >
+        </form>
+
+        <footer class="login-footer">
+          <a href="index.html" class="back-link">← Voltar ao site</a>
+        </footer>
+      </div>
+    </div>
+
+    <script src="assets/js/login.js"></script>
+  </body>
+</html>
